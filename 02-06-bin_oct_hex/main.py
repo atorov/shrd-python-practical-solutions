@@ -27,7 +27,14 @@ print(oct(2**32 + z))
 print(format(2**32 + z, "o"))
 
 print(hex(2**32 + z))
-print(format(2**32 + z, "x"))
+print(bin(UNSIGNED_32_BIT + z))
+print(format(UNSIGNED_32_BIT + z, "b"))
+
+print(oct(UNSIGNED_32_BIT + z))
+print(format(UNSIGNED_32_BIT + z, "o"))
+
+print(hex(UNSIGNED_32_BIT + z))
+print(format(UNSIGNED_32_BIT + z, "x"))
 
 print(int("4d2", 16))
 print(int("100101110101", 2))
