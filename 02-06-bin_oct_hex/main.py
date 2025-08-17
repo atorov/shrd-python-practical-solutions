@@ -19,14 +19,11 @@ print(format(y, "o"))
 print(hex(y))
 print(format(y, "x"))
 
+UNSIGNED_32_BIT = 1 << 32
+# UNSIGNED_32_BIT = 2**32
 z = -7777
+
 print(bin(2**32 + z))
-print(format(2**32 + z, "b"))
-
-print(oct(2**32 + z))
-print(format(2**32 + z, "o"))
-
-print(hex(2**32 + z))
 print(bin(UNSIGNED_32_BIT + z))
 print(format(UNSIGNED_32_BIT + z, "b"))
 
