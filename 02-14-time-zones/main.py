@@ -4,7 +4,7 @@ from pytz import timezone
 d = datetime(2025, 12, 15, 9, 30, 0)
 print(d)
 
-central = timezone("US/Central")
+central = timezone("America/Chicago")
 
 central_d = central.localize(d)
 print(central_d)
