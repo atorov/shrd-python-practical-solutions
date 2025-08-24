@@ -1,0 +1,15 @@
+This is a sample text file for demonstration.
+It contains multiple lines of text.
+Some lines talk about programming languages.
+Here we mention python as a great language.
+JavaScript is also popular nowadays.
+Many developers love working with different tools.
+The python programming language is versatile.
+It's used in web development, data science, and more.
+C++ is a powerful language for system programming.
+But python remains beginner-friendly and readable.
+Ruby is another interpreted language.
+Go is becoming more popular for backend services.
+Python's syntax is clean and intuitive.
+This makes it perfect for beginners.
+The end of our sample file.
