@@ -1,8 +1,9 @@
 from collections import deque
+from collections.abc import Iterable
+from typing import Deque, Generator
 
 
 q1 = deque(maxlen=5)
-
 q1.append(5)
 q1.append(4)
 q1.append(3)
@@ -36,13 +37,14 @@ q2.popleft()
 print(q2)
 
 
-def search(lines, pattern, history=3):
-    previous_lines = deque(maxlen=history)
-
-    for line in lines:
-        if pattern in line:
-            yield line, previous_lines
-        previous_lines.append(line)
+def search(
+    lines: Iterable[str], pattern: str, history: int = 3
+) -> Generator[tuple[str, Deque[str]], None, None]:
+    previous_lines: Deque[str] = deque(maxlen=history)
+    for cur_line in lines:
+        if pattern in cur_line:
+            yield cur_line, previous_lines
+        previous_lines.append(cur_line)
 
 
 if __name__ == "__main__":
@@ -51,9 +53,9 @@ if __name__ == "__main__":
     script_dir = os.path.dirname(os.path.abspath(__file__))
     file_path = os.path.join(script_dir, "myfile.txt")
 
-    with open(file_path) as f:
-        for line, prevlines in search(f, "python", 2):
-            for pline in prevlines:
+    with open(file_path, encoding="utf-8") as f:
+        for line, prev_lines in search(f, "python", 2):
+            for pline in prev_lines:
                 print(pline, end="")
             print(line, end="")
             print("-" * 20)
